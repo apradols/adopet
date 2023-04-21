@@ -1,7 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from adopet.views import home
+from adopet.views import index, home, login, cadastro, mensagem
 
 urlpatterns = [
-    path('', home)
+    path('', index, name='index'),
+    path('home/', home, name='home'),
+    path('login/', login, name='login'),
+    path('cadastro/', cadastro, name='cadastro'),
+    path('mensagem/', mensagem, name='mensagem'),
 ]

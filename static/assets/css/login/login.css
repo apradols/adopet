@@ -1,0 +1,34 @@
+.esqueci-senha {
+	display: block;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 24px;
+
+	color: var(--coral);
+}
+
+.sessao-principal--login {
+	margin-bottom: 15rem;
+}
+
+@media (min-height: 1300px) {
+	.sessao-principal--login {
+		margin-bottom: 29rem;
+	}
+
+}
+
+
+.error {
+	display: none;
+}
+
+.error--active {
+	margin-top: 1rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+	display: block;
+	background-color: brown;
+	color: var(--branco);
+}
