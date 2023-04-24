@@ -1,40 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'shared/base.html'%}
+{% load static %}
+{% block content %}
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Adot-Pet</title>
-	<link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
-	<!-- CSS -->
-	<link rel="stylesheet" href="./assets/css/reset.css">
-	<link rel="stylesheet" href="./assets/css/index.css">
-	<link rel="stylesheet" href="./assets/css/cadastro/cadastro.css">
-	<link rel="stylesheet" href="./assets/css/homer/home.css">
+	<link rel="stylesheet" href="{% static '/assets/css/reset.css' %}">
+	<link rel="stylesheet" href="{% static '/assets/css/index.css' %}">
+	<link rel="stylesheet" href="{% static '/assets/css/cadastro/cadastro.css' %}">
+	<link rel="stylesheet" href="{% static '/assets/css/homer/home.css' %}">
 	<!-- CSS página -->
-	<link rel="stylesheet" href="./assets/css/mensagem/mensagem.css">
-</head>
+	<link rel="stylesheet" href="{%  static '/assets/css/mensagem/mensagem.css' %}">
+
 
 <body>
 	<header class="cabecalho cabecalho--mensagem">
-		<div class="background__top"></div>
-		<ul class="cabecalho__lista">
-			<li class="cabecalho__item cabecalho__logo"><a href="index.html" class="cabecalho__link"><img
-						src="./assets/img/Logo-768.png" alt=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="index.html" class="cabecalho__link"><img src="./assets/img/icon-home.svg"
-						alt="" srcset=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="mensagem.html" class="cabecalho__link"><img src="./assets/img/icon-mail.svg"
-						alt="" srcset=""></a>
-			</li>
-		</ul>
-		<a href="perfil.html" class="cabecalho__link">
+		<a href="{% url 'perfil' %}" class="cabecalho__link">
 			<div class="perfil__usuario"></div>
 		</a>
 	</header>
-	<div class="background__lateral"></div>
 
 	<main>
 		<section class="container__mensagem">
@@ -71,10 +52,6 @@
 
 	</main>
 
-	<footer class="footer--cadastro">
-		<p class="footer__paragrago">2022 - Desenvolvido por Alura.</p>
-	</footer>
-	<script src="./assets/js/mensagem.js" type="module"></script>
 </body>
 
-</html>
+{% endblock %}

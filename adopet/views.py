@@ -14,3 +14,6 @@ def login(request):
 
 def mensagem(request):
     return render(request, 'mensagem.html')
+
+def perfil(request):
+    return render(request, 'perfil.html')

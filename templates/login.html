@@ -1,40 +1,11 @@
+{% extends 'shared/base.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
+{% block content %}
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Adopet</title>
-	<link rel="shortcut icon" href="{% static '/assets/img/favicon.svg' %}" type="image/x-icon">
-	<!-- CSS -->
-	<link rel="stylesheet" href="{% static '/assets/css/reset.css' %}">
 	<link rel="stylesheet" href="{% static '/assets/css/index.css' %}">
 	<link rel="stylesheet" href="{% static '/assets/css/cadastro/cadastro.css' %}">
 	<link rel="stylesheet" href="{% static '/assets/css/login/login.css' %}">
-</head>
 
-<body>
-	<header class="cabecalho cabecalho--cadastro">
-		<div class="background__top"></div>
-
-		<ul class="cabecalho__lista">
-			<li class="cabecalho__item cabecalho__logo"><a href="{% url 'index' %}" class="cabecalho__link"><img
-						src="{% static '/assets/img/Logo-768.png' %}" alt=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="{% url 'index' %}" class="cabecalho__link"><img src="{% static '/assets/img/icon-home.svg' %}"
-						alt="" srcset=""></a>
-			</li>
-			<li class="cabecalho__item"><a href="mensagem.html" class="cabecalho__link"><img src="{% static '/assets/img/icon-mail.svg' %}"
-						alt="" srcset=""></a>
-			</li>
-		</ul>
-
-		<div class="background__patas"></div>
-	</header>
-
-	<div class="background__lateral"></div>
 
 	<main>
 		<section class="sessao-principal--cadastro sessao-principal--login">
@@ -73,11 +44,4 @@
 		<div class="background__lateral--branco"></div>
 	</main>
 
-
-	<footer class="footer--cadastro">
-		<p class="footer__paragrago">2022 - Desenvolvido por Alura.</p>
-	</footer>
-	<script src="{% static '/assets/js/login.js' %}" type="module"></script>
-</body>
-
-</html>
+{% endblock %}
